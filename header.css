@@ -619,6 +619,10 @@ body:not(.subpage) header:not(.scrolled) #menuToggle input:checked ~ ul {
 #profileMobile {
     font-size: .8rem !important;
     padding-bottom: 10px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 210px;
 }
 #profileMobile:hover {
     background-color: transparent !important;
