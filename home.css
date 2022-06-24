@@ -220,5 +220,5 @@ section:not(.s-scrolled) .body-logo-innerBottom p  {
     padding-top: 100px;
 }
 div[data-container*="booking-container"] {
-    min-height: 1000px;
+    min-height: 1000px !important;
 }
