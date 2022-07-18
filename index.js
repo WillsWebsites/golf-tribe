@@ -1,47 +1,49 @@
 //Add scrolled class to header
 $(window).scroll(function () {
-  const scroll = $(window).scrollTop();
+  let scroll = $(window).scrollTop();
   if (scroll >= 40) {
-      $("header").addClass("scrolled");
+    $("header").addClass("scrolled");
   } else {
-      $("header").removeClass("scrolled");
+    $("header").removeClass("scrolled");
   }
 });
 //Add scrolled class to section
 $(window).scroll(function () {
-const sScroll = $(window).scrollTop();
-if (sScroll >= 40) {
+  let sScroll = $(window).scrollTop();
+  if (sScroll >= 40) {
     $("section").addClass("s-scrolled");
-} else {
+  } else {
     $("section").removeClass("s-scrolled");
-}
+  }
 });
-  
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
 
+$(document).ready(function () {
+  // Add smooth scrolling to all links
+  $("a").on("click", function (event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
       event.preventDefault();
 
       // Store hash
-      const hash = this.hash;
+      let hash = this.hash;
 
       // Using jQuery's animate() method to add smooth page scroll
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 1200, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        1200,
+        function () {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        }
+      );
     } // End if
   });
 });
 
 // Fade in effect
-window.addEventListener('DOMContentLoaded', () => {
-  document.body.classList.remove('fade-out');
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.remove("fade-out");
 });

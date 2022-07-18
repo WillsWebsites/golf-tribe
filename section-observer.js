@@ -13,14 +13,14 @@ if (
 } else {
   //Intersection Observer Scroll Reveal
   //Intersection Observer options
-  const scrollOptions = {
+  let scrollOptions = {
     rootMargin: "-200px 0px", //Root margin has us get 100px into the section (top or bottom) before it is visible to obersver
   };
   //Find all sections to do a scroll in effect
-  const targets = document.querySelectorAll(".scrollIn"); //Targets all items that have a scrollIn class
+  let targets = document.querySelectorAll(".scrollIn"); //Targets all items that have a scrollIn class
   //Observe the targets
-  const scrollReveal = function (target) {
-    const scrollObserver = new IntersectionObserver(function (
+  let scrollReveal = function (target) {
+    let scrollObserver = new IntersectionObserver(function (
       entries,
       observer
     ) {

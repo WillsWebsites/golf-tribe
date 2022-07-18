@@ -10,7 +10,7 @@
 
 // This
 function getHeaderHeight() {
-  const headerHeight = document.querySelector("header.gt-header").offsetHeight;
+  let headerHeight = document.querySelector("header.gt-header").offsetHeight;
   if (window.matchMedia("(max-width: 992px)").matches) {
     headerHeight = document.querySelector("header.gt-header").offsetHeight;
   }
@@ -30,16 +30,16 @@ function getHeaderHeight() {
 //On click of anchor tag
 // this
 $('a[href*="#"]:not([href="#"])').click(function (e) {
-  const urlPath = this.href.substring(0, this.href.indexOf("#")); //url wthout hash
-  const locationPath = location.href;
+  let urlPath = this.href.substring(0, this.href.indexOf("#")); //url wthout hash
+  let locationPath = location.href;
   if (locationPath.includes("#")) {
     locationPath = location.href.substring(0, location.href.indexOf("#")); //url wthout hash
   }
   if (urlPath == locationPath) {
     //If the urls are the same then do the anchor animation
-    const target = $(this.href.substring(this.href.indexOf("#")));
+    let target = $(this.href.substring(this.href.indexOf("#")));
     if (target.length) {
-      const headerHeight = getHeaderHeight();
+      let headerHeight = getHeaderHeight();
       $("html,body")
         .stop()
         .animate(
@@ -75,12 +75,12 @@ $('a[href*="#"]:not([href="#"])').click(function (e) {
 
   //On load of site going to the anchor tag
   $(window).on("pageshow", function () {
-    const hash = window.location.hash;
+    let hash = window.location.hash;
     if (hash == "" || hash == "#" || hash == undefined) return false;
-    const target = $(hash);
+    let target = $(hash);
     //target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
     if (target.length) {
-      const headerHeight = getHeaderHeight();
+      let headerHeight = getHeaderHeight();
       $("html,body")
         .stop()
         .animate(

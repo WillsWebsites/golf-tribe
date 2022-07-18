@@ -2,10 +2,10 @@
 function setupTabs() {
   document.querySelectorAll(".tab").forEach((button) => {
     button.addEventListener("click", () => {
-      const sideBar = button.parentElement;
-      const tabContainer = sideBar.parentElement;
-      const tabNumber = button.dataset.forTab;
-      const tabToActivate = document.querySelector(
+      let sideBar = button.parentElement;
+      let tabContainer = sideBar.parentElement;
+      let tabNumber = button.dataset.forTab;
+      let tabToActivate = document.querySelector(
         `.tab-text[data-tab="${tabNumber}"]`
       );
 
@@ -33,19 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
 // Modal popups
 
 function modalFunction() {
-  const popup = document.getElementById("myPopup");
+  let popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
   popup.parentElement.classList.toggle("popupOpened");
 }
 
 function modalFunction2() {
-  const popup = document.getElementById("myPopup2");
+  let popup = document.getElementById("myPopup2");
   popup.classList.toggle("show");
   popup.parentElement.classList.toggle("popupOpened");
 }
 
 function modalFunction3() {
-  const popup = document.getElementById("myPopup3");
+  let popup = document.getElementById("myPopup3");
   popup.classList.toggle("show");
   popup.parentElement.classList.toggle("popupOpened");
 }
