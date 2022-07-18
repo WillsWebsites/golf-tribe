@@ -1,6 +1,6 @@
 //Add scrolled class to header
 $(window).scroll(function () {
-  var scroll = $(window).scrollTop();
+  const scroll = $(window).scrollTop();
   if (scroll >= 40) {
       $("header").addClass("scrolled");
   } else {
@@ -9,7 +9,7 @@ $(window).scroll(function () {
 });
 //Add scrolled class to section
 $(window).scroll(function () {
-var sScroll = $(window).scrollTop();
+const sScroll = $(window).scrollTop();
 if (sScroll >= 40) {
     $("section").addClass("s-scrolled");
 } else {
@@ -27,7 +27,7 @@ $(document).ready(function(){
       event.preventDefault();
 
       // Store hash
-      var hash = this.hash;
+      const hash = this.hash;
 
       // Using jQuery's animate() method to add smooth page scroll
       $('html, body').animate({
