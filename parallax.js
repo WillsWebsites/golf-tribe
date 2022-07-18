@@ -9,8 +9,8 @@
   // via: https://gist.github.com/paulirish/1579671
 
   (function () {
-    const lastTime = 0;
-    const vendors = ["ms", "moz", "webkit", "o"];
+    let lastTime = 0;
+    let vendors = ["ms", "moz", "webkit", "o"];
     for (let x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
       window.requestAnimationFrame =
         window[vendors[x] + "RequestAnimationFrame"];
@@ -22,8 +22,8 @@
     if (!window.requestAnimationFrame)
       window.requestAnimationFrame = function (callback) {
         let currTime = new Date().getTime();
-        const timeToCall = Math.max(0, 16 - (currTime - lastTime));
-        const id = window.setTimeout(function () {
+        let timeToCall = Math.max(0, 16 - (currTime - lastTime));
+        let id = window.setTimeout(function () {
           callback(currTime + timeToCall);
         }, timeToCall);
         lastTime = currTime + timeToCall;
@@ -36,10 +36,10 @@
       };
   })();
 
-  // Parallax Constructor
+  // Parallax letructor
 
   function Parallax(element, options) {
-    const self = this;
+    let self = this;
 
     if (typeof options == "object") {
       delete options.refresh;
@@ -126,7 +126,7 @@
 
     this.$mirror = $("<div />").prependTo(this.mirrorContainer);
 
-    const slider = this.$element.find(">.parallax-slider");
+    let slider = this.$element.find(">.parallax-slider");
     let sliderExisted = false;
 
     if (slider.length == 0) this.$slider = $("<img />").prependTo(this.$mirror);
@@ -187,16 +187,16 @@
       this.boxOffsetLeft = this.$element.offset().left;
       this.boxOffsetBottom = this.boxOffsetTop + this.boxHeight;
 
-      const winHeight = Parallax.winHeight;
-      const docHeight = Parallax.docHeight;
-      const maxOffset = Math.min(this.boxOffsetTop, docHeight - winHeight);
-      const minOffset = Math.max(
+      let winHeight = Parallax.winHeight;
+      let docHeight = Parallax.docHeight;
+      let maxOffset = Math.min(this.boxOffsetTop, docHeight - winHeight);
+      let minOffset = Math.max(
         this.boxOffsetTop + this.boxHeight - winHeight,
         0
       );
-      const imageHeightMin =
+      let imageHeightMin =
         (this.boxHeight + (maxOffset - minOffset) * (1 - this.speed)) | 0;
-      const imageOffsetMin =
+      let imageOffsetMin =
         ((this.boxOffsetTop - maxOffset) * (1 - this.speed)) | 0;
       let margin;
 
@@ -237,10 +237,10 @@
     },
 
     render: function () {
-      const scrollTop = Parallax.scrollTop;
-      const scrollLeft = Parallax.scrollLeft;
-      const overScroll = this.overScrollFix ? Parallax.overScroll : 0;
-      const scrollBottom = scrollTop + Parallax.winHeight;
+      let scrollTop = Parallax.scrollTop;
+      let scrollLeft = Parallax.scrollLeft;
+      let overScroll = this.overScrollFix ? Parallax.overScroll : 0;
+      let scrollBottom = scrollTop + Parallax.winHeight;
 
       if (
         this.boxOffsetBottom > scrollTop &&
@@ -298,22 +298,22 @@
     setup: function () {
       if (this.isReady) return;
 
-      const self = this;
+      let self = this;
 
-      const $doc = $(document),
+      let $doc = $(document),
         $win = $(window);
 
-      const loadDimensions = function () {
+      let loadDimensions = function () {
         Parallax.winHeight = $win.height();
         Parallax.winWidth = $win.width();
         Parallax.docHeight = $doc.height();
         Parallax.docWidth = $doc.width();
       };
 
-      const loadScrollPosition = function () {
-        const winScrollTop = $win.scrollTop();
-        const scrollTopMax = Parallax.docHeight - Parallax.winHeight;
-        const scrollLeftMax = Parallax.docWidth - Parallax.winWidth;
+      let loadScrollPosition = function () {
+        let winScrollTop = $win.scrollTop();
+        let scrollTopMax = Parallax.docHeight - Parallax.winHeight;
+        let scrollLeftMax = Parallax.docWidth - Parallax.winWidth;
         Parallax.scrollTop = Math.max(0, Math.min(scrollTopMax, winScrollTop));
         Parallax.scrollLeft = Math.max(
           0,
@@ -342,7 +342,7 @@
 
       this.isReady = true;
 
-      const lastPosition = -1;
+      let lastPosition = -1;
 
       function frameLoop() {
         if (lastPosition == window.pageYOffset) {
@@ -381,7 +381,7 @@
     },
 
     requestRender: function () {
-      const self = this;
+      let self = this;
       self.render();
       self.isBusy = false;
     },
@@ -407,8 +407,8 @@
 
   function Plugin(option) {
     return this.each(function () {
-      const $this = $(this);
-      const options = typeof option == "object" && option;
+      let $this = $(this);
+      let options = typeof option == "object" && option;
 
       if (this == window || this == document || $this.is("body")) {
         Parallax.configure(options);
@@ -428,10 +428,10 @@
     });
   }
 
-  const old = $.fn.parallax;
+  let old = $.fn.parallax;
 
   $.fn.parallax = Plugin;
-  $.fn.parallax.Constructor = Parallax;
+  $.fn.parallax.letructor = Parallax;
 
   // Parallax No Conflict
 
