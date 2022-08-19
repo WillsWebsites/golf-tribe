@@ -44,12 +44,13 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
     <script>
         $(document).ready(function() {
             $(".se-pre-con").fadeOut("slow");;
         });
     </script>
-    <script src="parallax.js"></script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body class="homepage">
@@ -114,7 +115,7 @@
     </div>
 </header>
 <main>
-    <section id="section_0" class="hero" data-parallax="scroll" data-image-src="./IMG_0485.jpg" data-natural-width="1999" data-natural-height="1499" data-speed=".6" data-bleed="5">
+    <section id="section_0" class="hero" data-parallax="scroll" data-speed=".6" data-bleed="5">
         <div class="overlay">
             <div class="content-container">
                 <a href="index.html#jumpTo" class="body-logo">
@@ -247,7 +248,7 @@
             </div>
         </div>
     </section>
-    <section id="section_4" class="pricing" data-parallax="scroll" data-image-src="./pricing-cards-bw.jpg" data-natural-width="2016" data-natural-height="1512" data-speed=".35" data-bleed="10">
+    <section id="section_4" class="pricing" data-parallax="scroll" data-speed=".35" data-bleed="10">
         <div id="jumpPricing" class="jump-item"></div>
         <div class="overlay">
             <div class="content-container">
@@ -456,9 +457,9 @@
     </div>
     <h6>Development & Design By <a href="mailto:contactwillswebsites@gmail.com?subject=Website Build Inquiry" target="_blank">Will's Websites</a></h6>
 </footer>
-<script src="index.js" type="text/javascript"></script>
-<script src="home.js" type="text/javascript"></script>
-<script src="section-observer.js" type="text/javascript"></script>
+<script src="index.js" type="module"></script>
+<script src="home.js" type="module"></script>
+<script src="section-observer.js" type="module"></script>
 <script src="https://cdn.auth0.com/js/auth0-spa-js/1.20/auth0-spa-js.production.js"></script>
 <script src="app.js"></script> 
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>

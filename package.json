@@ -1,0 +1,30 @@
+{
+    "name": "golf-tribe",
+    "version": "1.5.0",
+    "description": "Golf Tribe's Main Website",
+    "default": "/index.html",
+    "browserslist": "> 1%, last 2 versions, not dead, not ie 11",
+    "targets": {
+        "main": false
+    },
+    "scripts": {
+        "start": "parcel index.html",
+        "build": " parcel build index.html --dist-dir ./dist"
+    },
+    "author": "William Schaefermeyer",
+    "license": "ISC",
+    "devDependencies": {
+        "@parcel/packager-raw-url": "^2.7.0",
+        "@parcel/transformer-sass": "^2.7.0",
+        "@parcel/transformer-webmanifest": "^2.7.0",
+        "parcel": "^2.7.0",
+        "process": "^0.11.10"
+    },
+    "dependencies": {
+        "core-js": "^3.22.3",
+        "jquery-parallax.js": "^1.5.0",
+        "lodash-es": "^4.17.21",
+        "regenerator-runtime": "^0.13.9"
+    },
+    "main": "index.js"
+}
