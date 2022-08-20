@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+
+// Fonts
+$primary-font: 'Chakra Petch', sans-serif;
+$secondary-font: 'Outfit', sans-serif;
+
+
+
+// Colors
+$light: rgb(255, 255, 255);
+$dark: rgb(14, 14, 16);
+$gray: rgb(35, 35, 35);
+$primary: rgb(26, 33, 17);
+$primary-shadow: darken($primary, 12);
+$primary-highlight: lighten($primary, 12);
+$secondary: rgb(52, 70, 30);
+$secondary-shadow: rgb(32, 44, 18);
+$secondary-light: rgb(83, 113, 51);
+$secondary-light-shadow: rgb(64, 86, 37);
+$tertiary: rgb(100, 46, 46);
+$tertiary-shadow: rgb(96, 47, 47);
+
+$link: $light;
+$link-hover: $secondary-light;
+
+$footer: $light;
+$footer-primary: $secondary;
+
+
+// Font sizes desktop
+$x-small: 1.1rem;
+$small: 1.6rem;
+$medium: 2.1rem;
+$large: 3.0rem;
+$x-large: 5rem;
+
+// Font sizes mobile
+$x-small-m: 0.8rem;
+$small-m: 1rem;
+$medium-m: 1.6rem;
+$large-m: 2.2rem;
+$x-large-m: 3.5rem;
+
+// Breakpoint min-width's
+$mobile: "min-width: 368px";
+$mobile-large: "min-width: 568px";
+$tablet: "min-width: 768px";
+$laptop: "min-width: 992px";
+$desktop: "min-width: 1200px";
+$desktop-large: "min-width: 2000px";
+
+// Breakpoint max-width's
+$mobile-max: "max-width: 367px";
+$mobile-large-max: "max-width: 567px";
+$tablet-max: "max-width: 767px";
+$laptop-max: "max-width: 991px";
+$desktop-max: "max-width: 1199px";
+$desktop-large-max: "max-width: 1999px";
+
+// Container width's
+$container-m: 95%;
+$container: 85%;
+$container-max: 1400px;
+
+// Buttons
+$btn: $secondary-light;
+$btn-hover: $tertiary;
+$btn-color: $light;
+$btn-color-hover: $light;
+$btn-size: $small - .2rem;
+$btn-border: none;
+$btn-radius: 10px;

@@ -44,6 +44,11 @@ $(document).ready(function () {
 });
 
 // Fade in effect
-window.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.remove("fade-out");
+$(document).ready(function () {
+  setTimeout(() => {
+    $(".loading").fadeOut("slow");
+    setTimeout(() => {
+      $(".loading").addClass("content-loaded");
+    }, 300);
+  }, 750);
 });

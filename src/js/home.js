@@ -50,6 +50,9 @@ function modalFunction3() {
   popup.parentElement.classList.toggle("popupOpened");
 }
 
-
-$('#section_0').parallax({imageSrc: new URL('./IMG_0485.jpg', import.meta.url)});
-$('#section_4').parallax({imageSrc: new URL('./pricing-cards-bw.jpg', import.meta.url)})
+$("#section_0").parallax({
+  imageSrc: new URL("../img/IMG_0485.jpg", import.meta.url),
+});
+$("#section_4").parallax({
+  imageSrc: new URL("../img/pricing-cards-bw.jpg", import.meta.url),
+});

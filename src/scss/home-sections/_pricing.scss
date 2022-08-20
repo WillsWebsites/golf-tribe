@@ -132,7 +132,7 @@
     content: "";
     width: 50%;
     height: 3px;
-    background-color: var(--light-green);
+    background-color: $secondary-light;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -233,13 +233,13 @@ hr {
     width: 70%;
     display: inline-block;
     text-align: center;
-    background-color: var(--light-green);
-    box-shadow: 0px 5px var(--light-green-shadow);
+    background-color: $secondary-light;
+    box-shadow: 0px 5px $secondary-light-shadow;
     border: 0px;
     border-radius: 5px;
     padding: 15px 0;
     margin-bottom: 15px;
-    color: var(--light-color);
+    color: $light;
     text-decoration: none;
     letter-spacing: 2px;
     cursor: pointer;
@@ -257,8 +257,8 @@ hr {
 .btn:hover, .btn:active, .btn:focus {
     color: white;
     opacity: 1;
-    background-color: var(--special-color);
-    box-shadow: 0px 0px var(--transparent) !important;
+    background-color: $tertiary;
+    box-shadow: 0px 0px transparent !important;
     transform: translateY(4px);
 }
 
@@ -276,7 +276,7 @@ hr {
 }
 @media (max-width: 768px) {
     .pricing {
-        background-image: url(./IMG_0488.jpg);
+        // background-image: url(../../img/IMG_0488.jpg);
         background-position: 35% center;
     }
     .pricing .overlay {
@@ -295,3 +295,11 @@ hr {
         width: 90%;
     }
 }
+
+
+.pricing.scrollIn .scroll-content {
+    transform: translateY(50px) scale(.93);
+  }
+  .pricing.scrollIn.visible .scroll-content {
+    transform: translateY(0) scale(1)
+  }

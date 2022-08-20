@@ -1,0 +1,17 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loadingDot {
+  0% {
+    background-color: rgba($light, .1);
+  }
+  100% {
+    background-color: $light;
+  }
+}
