@@ -14,8 +14,8 @@
     <meta property="og:title" content="Home | Golf Tribe" />
     <meta property="og:description" content="Golf Tribe is a golf simulator we built in a shed to take advantage of the most advanced launch monitor technology at a fraction of the price of other hitting bays." />
     <meta property="og:url" content="https://www.golf-tribe.com/" />
-    <meta property="og:image:url" content="https://www.golf-tribe.com/social-share.png" />
-    <meta property="og:image" content="https://www.golf-tribe.com/social-share.png" />
+    <meta property="og:image:url" content="https://www.golf-tribe.com/src/img/social-share.png" />
+    <meta property="og:image" content="https://www.golf-tribe.com/src/img/social-share.png" />
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1332">
     <meta property="og:image:height" content="773">
@@ -23,42 +23,34 @@
     <meta name="twitter:creator" content="@william_schaef">
     <meta name="twitter:title" content="Home | Golf Tribe">
     <meta name="twitter:description" content="Golf Tribe is a golf simulator we built in a shed to take advantage of the most advanced launch monitor technology at a fraction of the price of other hitting bays.">
-    <meta name="twitter:image" content="https://golf-tribe.com/social-share.png">
+    <meta name="twitter:image" content="https://golf-tribe.com/src/img/social-share.png">
     <title>Home | Golf Tribe</title>
-    <link rel="shortcut icon" type="image/png" href="favicon.png" />
-    <link rel="stylesheet" href="index.css" type="text/css">
-    <link rel="stylesheet" href="colors.css" type="text/css">
-    <link rel="stylesheet" href="home.css" type="text/css">
-    <link rel="stylesheet" href="header.css" type="text/css">
-    <link rel="stylesheet" href="footer.css" type="text/css">
-    <link rel="stylesheet" href="play-train-cards.css" type="text/css">
-    <link rel="stylesheet" href="tab-divider.css" type="text/css">
-    <link rel="stylesheet" href="pricing.css" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="./src/img/favicon.png" />
+    <link rel="stylesheet" href="./src/scss/home.scss" />
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-    <style type="text/css">
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
-    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".se-pre-con").fadeOut("slow");;
-        });
-    </script>
-
+    <script src="./src/js/index.js" type="module"></script>
+    <script src="./src/js/home.js" type="module"></script>
+    <script src="./src/js/section-observer.js" type="module"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body class="homepage">
-<div class="se-pre-con"></div>
+<div class="loading">
+    <img src="./src/img/main-logo.png" alt="Golf Tribe Logo" class="loading-logo" />
+    <div class="loading-dots">
+        <div class="dot dot1"></div>
+        <div class="dot dot2"></div>
+        <div class="dot dot3"></div>
+        <div class="dot dot4"></div>
+        <div class="dot dot5"></div>
+    </div>
+</div>
 <header id="header" class="gt-header">
-    <div class="header-overlay">
-        <div class="header-container">
-            <div class="header-inner">
+    <div class="h-overlay">
+        <div class="h-container">
+            <div class="h-inner">
                 <div class="header-leftContent">
                     <div class="leftContent-contact">
                         <a href="mailto:golftribesf@gmail.com"  target="_blank" class="email">
@@ -84,7 +76,7 @@
                     <ul class="nav-list">
                         <li id="nav-logo" class="nav-item logo-nav-item">
                             <a href="index.html#jumpTo" class="logo-link">
-                                <img src="main-logo.png" alt="Golf Tribe Logo" />
+                                <img src="./src/img/main-logo.png" alt="Golf Tribe Logo" />
                             </a>
                         </li>
                     </ul>
@@ -121,7 +113,7 @@
                 <a href="index.html#jumpTo" class="body-logo">
                     <div class="body-logo-inner">
                         <div class="body-logo-innerTop">
-                            <img src="main-logo.png" alt="Golf Tribe Logo" class="body-logo-link" />
+                            <img src="./src/img/main-logo.png" alt="Golf Tribe Logo" class="body-logo-link" />
                         </div>
                         <div class="body-logo-innerBottom">
                             <p>Click to get started</p>
@@ -159,10 +151,10 @@
                         <h2>Simulator Features</h2>
                     </div>
                     <div class="play-train-cards">
-                        <div class="card-container card-container1 popup" onclick="modalFunction()">
+                        <div class="card-container card-container1 popup">
                             <div class="card card1">
                                 <div class="imgBx">
-                                    <img src="play-icon.png">
+                                    <img src="./src/img/play-icon.png">
                                 </div>
                                 <div class="contentBx">
                                     <h3>Play</h3>
@@ -171,7 +163,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="popuptext" id="myPopup">
+                            <div class="popuptext">
                                 <h3>Play</h3>
                                 <ul>
                                     <li>Play courses from all around the world</li>
@@ -181,10 +173,10 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="card-container card-container2 popup" onclick="modalFunction2()">
+                        <div class="card-container card-container2 popup">
                             <div class="card card2">
                                 <div class="imgBx">
-                                    <img src="compete-icon.png">
+                                    <img src="./src/img/compete-icon.png">
                                 </div>
                                 <div class="contentBx">
                                     <h3>Compete</h3>
@@ -193,7 +185,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="popuptext" id="myPopup2">
+                            <div class="popuptext">
                                 <h3>Compete</h3>
                                 <ul>
                                     <li>Create an FSX Live account to compete with other golfers around the world</li>
@@ -202,10 +194,10 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="card-container card-container3 popup" onclick="modalFunction3()">
+                        <div class="card-container card-container3 popup">
                             <div class="card card3">
                                 <div class="imgBx">
-                                    <img src="improve-icon.png">
+                                    <img src="./src/img/improve-icon.png">
                                 </div>
                                 <div class="contentBx">
                                     <h3>Improve</h3>
@@ -214,7 +206,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="popuptext" id="myPopup3">
+                            <div class="popuptext">
                                 <h3>Improve</h3>
                                 <ul>
                                     <li>Gather swing data using the most accurate launch monitor in the game</li>
@@ -270,7 +262,7 @@
                                         <ul class="features">
                                             <li>
                                                 <div class="features-container">
-                                                    <img src="logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>Member + 1 Guest</span>
+                                                    <img src="./src/img/logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>Member + 1 Guest</span>
                                                 </div>
                                             </li>
                                             <li class="blank-line">
@@ -287,12 +279,12 @@
                                         <ul class="features">
                                             <li>
                                                 <div class="features-container">
-                                                    <img src="logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>1 Month Free</span>
+                                                    <img src="./src/img/logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>1 Month Free</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="features-container">
-                                                    <img src="logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>Member + 1 Guest</span>
+                                                    <img src="./src/img/logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>Member + 1 Guest</span>
                                                 </div>
                                             </li>
                                         </ul>
@@ -313,7 +305,7 @@
                                         <ul class="features">
                                             <li>
                                                 <div class="features-container">
-                                                    <img src="logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>Member + 1 Guest</span>
+                                                    <img src="./src/img/logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>Member + 1 Guest</span>
                                                 </div>
                                             </li>
                                             <li class="blank-line">
@@ -330,12 +322,12 @@
                                         <ul class="features">
                                             <li>
                                                 <div class="features-container">
-                                                    <img src="logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>1 Month Free</span>
+                                                    <img src="./src/img/logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>1 Month Free</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="features-container">
-                                                    <img src="logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>Member + 1 Guest</span>
+                                                    <img src="./src/img/logo.png" alt="Golf Tribe Logo" class="golf-ball" /><span>Member + 1 Guest</span>
                                                 </div>
                                             </li>
                                         </ul>
@@ -409,21 +401,11 @@
                     <h5>Golf Tribe </h5>
                     <div class="f-social-media">
                         <div class="f-social-media-inner">
-                            <!-- <div class="facebook">
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </div> -->
                             <div class="instagram">
                                 <a href="https://www.instagram.com/golftribesf/" target="_blank">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
-                            <!-- <div class="youtube">
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div> -->
                         </div>
                     </div>
                     <p>Copyright © 2022</p>
@@ -457,11 +439,8 @@
     </div>
     <h6>Development & Design By <a href="mailto:contactwillswebsites@gmail.com?subject=Website Build Inquiry" target="_blank">Will's Websites</a></h6>
 </footer>
-<script src="index.js" type="module"></script>
-<script src="home.js" type="module"></script>
-<script src="section-observer.js" type="module"></script>
 <script src="https://cdn.auth0.com/js/auth0-spa-js/1.20/auth0-spa-js.production.js"></script>
-<script src="app.js"></script> 
+<script src="./src/js/app.js"></script> 
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>
