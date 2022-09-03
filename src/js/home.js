@@ -1,25 +1,9 @@
 // Modal popups
-// function modalFunction() {
-//   let popup = document.getElementById("myPopup");
-//   popup.classList.toggle("show");
-//   popup.parentElement.classList.toggle("popupOpened");
-// }
-
-// function modalFunction2() {
-//   let popup = document.getElementById("myPopup2");
-//   popup.classList.toggle("show");
-//   popup.parentElement.classList.toggle("popupOpened");
-// }
-
-// function modalFunction3() {
-//   let popup = document.getElementById("myPopup3");
-//   popup.classList.toggle("show");
-//   popup.parentElement.classList.toggle("popupOpened");
-// }
-
 $('.popup').on('click touchend', function() {
-  $(this).find('.popuptext').toggleClass('show');
-  $(this).toggleClass('popupOpened');
+  $('.popup').removeClass('show');
+  $('.popuptext').removeClass('popupOpened');
+  $(this).addClass('show');
+  $(this).find('.popuptext').addClass('popupOpened');
 });
 
 // Adding parallax effect for background images
