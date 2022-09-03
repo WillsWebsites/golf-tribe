@@ -89,12 +89,12 @@
     }
 }
 
-.pricing-card:hover {
-    background: linear-gradient(rgba(255, 255, 255, .25), rgba(255, 255, 255, 0.05));
-    box-shadow: 5px 2px 25px 10px rgba(255, 255, 255, .07);
-    border: 1px solid rgba(255, 255, 255, .2);
-    border-top: 2px solid rgba(255, 255, 255, .3);
-}
+// .pricing-card:hover {
+//     background: linear-gradient(rgba(255, 255, 255, .25), rgba(255, 255, 255, 0.05));
+//     box-shadow: 5px 2px 25px 10px rgba(255, 255, 255, .07);
+//     border: 1px solid rgba(255, 255, 255, .2);
+//     border-top: 2px solid rgba(255, 255, 255, .3);
+// }
 .fourth-grid p:not(.price) {
     margin: 25px 0px;
 }
