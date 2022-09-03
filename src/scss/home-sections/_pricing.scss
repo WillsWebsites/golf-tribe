@@ -82,8 +82,8 @@
         border-top-right-radius: 0px;
     }
     .pricing-card9, .pricing-card9 .card-overlay {
-        border-bottom-left-radius: 0px;
-        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0 !important;
+        border-top-left-radius: 0;
         border-bottom-right-radius: 35px;
         border-top-right-radius: 35px; 
     }
