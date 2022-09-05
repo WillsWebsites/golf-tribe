@@ -9,3 +9,6 @@
 ![Pricing Preview](./src/img/pricing-preview.png)
 ## Credit:
 ### Development & Design By [Will's Websites](https://www.willswebsitesdesign.com)
+
+***
+[Open Golf Tribe](https://www.golf-tribe.com)
