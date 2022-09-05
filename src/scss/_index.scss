@@ -186,8 +186,12 @@ button {
   .loading-logo {
     width: 100%;
     height: auto;
-    max-width: 230px;
+    max-width: 150px;
     filter: brightness(0) invert(1);
+
+    @media ($tablet) {
+      max-width: 230px;
+    }
   }
   .loading-dots {
     display: flex;
